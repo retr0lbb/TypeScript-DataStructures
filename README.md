@@ -1,46 +1,29 @@
 # TypeScript-DataStructures
 
-tem 3 simples estruturas de dados nesse arquivo e futuramente tera muito mais.
+Este repositório contém implementações simples de estruturas de dados em TypeScript, e está em constante desenvolvimento, com o objetivo de incluir uma variedade de estruturas de dados úteis.
 
-as 3 estruturas de dados são Array que é a mais basica e mais ultilizada, Linked List que é uma "versão melhorada" Da array pois manipula a memoria de um jeito diferente do convencional da array, e uma arvore binaria de busca.
+As três estruturas de dados atualmente presentes são:
 
+1. **Array:** A estrutura mais básica e amplamente utilizada, que oferece acesso rápido aos elementos por meio de seus índices. As arrays são ideais para armazenar coleções de elementos do mesmo tipo e oferecem uma complexidade de tempo de O(1) para acesso direto aos elementos.
 
-## Array
+2. **Linked List:** Uma estrutura de dados dinâmica que consiste em nós encadeados, onde cada nó contém um valor e uma referência ao próximo nó na lista. As listas encadeadas são eficientes para inserção e exclusão de elementos, especialmente no início, mas têm uma complexidade de tempo de O(n) para acesso aleatório aos elementos.
 
-array é a estrutura mais ultilizada no mundo da programação, ela é basicamente como se fosse uma lista da compras e voce consegue acessar os items da lista pela posição dele.
-por exemplo se vc tem uma lista de compras com o seguinte formato:
+3. **Árvore Binária de Busca:** Uma estrutura de dados hierárquica em que cada nó possui no máximo dois filhos, e os elementos são organizados de forma que os elementos menores estão à esquerda e os elementos maiores estão à direita. As árvores binárias de busca são eficientes para busca, inserção e exclusão de elementos, oferecendo uma complexidade de tempo médio de O(log n) para essas operações.
 
-### Lista de Compras
-- 1. Arroz
-- 2. Feijão
-- 3. Batata
-- 4. Macarrão
+## Exemplos de Uso
 
-para acessar o item macarrão vc precisaria fazer isso Lista de Compras[4] o que acessaria o 4° item da lista, obviamente no codigo as arrays começam em 0.
-As arrays são muito ultilizadas pois sua leitura é muito rapida, pra quem manja o (O) notation para a leitura da array é O(1) caso saiba o indice do elemento.
+Aqui estão alguns exemplos de como utilizar as estruturas de dados presentes neste repositório:
 
-exemplo de array no ts 
-```ts
+### Array
+
+```typescript
 const array: string[] = ["Arroz", "Feijão", "Batata", "Macarrão"];
-array[1] // Feijão
+console.log(array[1]); // Saída: Feijão
 ```
 
-#### Vale Lembrar:
-Arrays pode armazenar items com o mesmo tipo. por exemplo uma lista de Strings
-como:
-```ts
-let array: string[] = ["arroz", "feijão", "batata"]
-```
-E também valores variados como 
-```ts
-let array: any[]= [null, {red: 1, blue: 0, green: 0}, "Fur"] 
-```
+arrays são como uma lista de compra, seus itens são seguidos e sempre um em baixo do outro, o computador armazena as arrays de forma parecida ele vasculha na memoria um espaço livre e seguido para guardar elementos dessa lista.
+Os elementos dessa lista podem ter varios formatos como: Strings, Numeros, Objetos, booleanos entre outros. geralmente as arrays são preenchidas com apenas 1 tipo de objeto mas em linguagens como javascript voce pode colocar objetos não relacionados em sequencia
 
-### O jeito que arrays funcionam na memoria.
+#### Uma array:
 
-Para acessar um item de uma array utilizamos o seu indice, e isso só funciona pois os valores das arrays são guardados um do lado do outro na memoria. o problema disso é que as vezes não se tem espaços em sequencia de memoria vazia para o tamanho da array, então a array tem que se re alocar para um tamanho de memoria que caiba ela. e quando queremos inserir um item no inicio da array temos que mover toda ela uma casa para o lado.
-
-então quando queremos inserir um item no inicio da array o tempo do codigo vai depender do tamanho da array, se por exemplo demora 1 segundo para qualquer inserção e sua array tem 200 items ira demorar 200 segundos para inserir algo no inicio da array, é claro que esse valor é imaginario ja que para o computador é ultra rapido fazer isso coisa de menos de 0.001 mili segundos.
-então as arrays são as mais indicadas para quem quer ler os elementos e não ira ficar alterando muito eles.
-
-
+dentre as inumeras funções da array existem as principais, pop e push, sendo o push o ato de inserir um elemento na array de forma com que o elemento fique na ultima posição e o pop que como ja diz tira o 1 elemento da array
